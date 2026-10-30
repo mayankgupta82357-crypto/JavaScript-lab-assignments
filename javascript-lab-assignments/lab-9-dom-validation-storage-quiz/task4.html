@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4 - Quiz</title>
+</head>
+<body>
+  <!-- Name: Mayank Gupta -->
+  <!-- Roll No.: 2510303296 -->
+  <!-- Assignment: 9, Task 4 -->
+
+  <h2>What is 2 + 3?</h2>
+
+  <label><input type="radio" name="answer" value="4"> 4</label><br>
+  <label><input type="radio" name="answer" value="5"> 5</label><br>
+  <label><input type="radio" name="answer" value="6"> 6</label><br><br>
+
+  <button onclick="checkAnswer()">Check answer</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      const selected = document.querySelector(
+        'input[name="answer"]:checked'
+      );
+
+      if (selected && selected.value === "5") {
+        document.getElementById("result").textContent = "Correct";
+      } else {
+        document.getElementById("result").textContent = "Try again";
+      }
+    }
+  </script>
+</body>
+</html>
