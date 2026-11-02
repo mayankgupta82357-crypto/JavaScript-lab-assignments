@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3 - Local Storage</title>
+</head>
+<body>
+  <!-- Name: Mayank Gupta -->
+  <!-- Roll No.: 2510303296 -->
+  <!-- Assignment: 9, Task 3 -->
+
+  <h2>My Notes</h2>
+
+  <input type="text" id="noteBox" placeholder="Enter your note">
+  <button onclick="saveNote()">Save</button>
+
+  <script>
+    const noteBox = document.getElementById("noteBox");
+
+    // Show saved text when the page opens
+    noteBox.value = localStorage.getItem("note") || "";
+
+    function saveNote() {
+      localStorage.setItem("note", noteBox.value);
+      alert("Note saved!");
+    }
+  </script>
+</body>
+</html>
